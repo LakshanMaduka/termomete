@@ -3,7 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class IconWidget extends StatelessWidget {
   String? name;
-  IconWidget({super.key, this.name});
+  Function()? function;
+  IconWidget({super.key, this.name,this.function});
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +24,7 @@ class IconWidget extends StatelessWidget {
             'assets/images/${name}',
             height: 20,
           ),
+          onTap: function,
         ),
       ),
     );
